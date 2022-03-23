@@ -1,0 +1,22 @@
+{
+  "name": "md-html",
+  "version": "1.0.0",
+  "description": "convert markdown to HTML",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "mdhtml": "./index.js"
+  },
+  "scripts": {
+    "start": "./index.js",
+    "test": "./index.js --src test/test.md --output test/output.html --title 'Test Title'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "markdown-it": "^12.3.2",
+    "markdown-it-highlightjs": "^3.6.0",
+    "prettier": "^2.6.0"
+  }
+}
