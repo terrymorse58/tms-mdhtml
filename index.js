@@ -8,10 +8,13 @@
      --src <markdown_file>
        markdown file to convert [REQUIRED]
    Optional:
+
      --style <css_file> css to include
        insert css_file contents into style element
+
      --title "My Title Text"
        insert "My Title Text" into title element
+
      --output <html_file>
        save complete HTML to html_file
        if not specified, HTML goes to stdout
@@ -19,7 +22,7 @@
 
 import { readFileText, isExistingFilePath } from './fileutils.js';
 import * as fs from 'fs';
-import { mdToHtmlDocument} from './mdhtml.js';
+import { mdToHtmlDocument } from './mdhtml.js';
 
 /**
  * extract flagged value from command line args

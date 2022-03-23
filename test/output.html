@@ -417,8 +417,9 @@
     <p>Fenced code block:</p>
     <pre><code class="hljs language-javascript"><span class="hljs-comment">// JavaScript:</span>
 
+<span class="hljs-comment">//       1         2         3         4         5         6         7         8</span>
 <span class="hljs-comment">//3456789|123456789|123456789|123456789|123456789|123456789|123456789|123456789|123456789|</span>
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">injectFc</span>(<span class="hljs-params"></span>) {
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">injectFc</span> () {
   <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelectorAll</span>(<span class="hljs-string">&#x27;yt-live-chat-text-message-renderer:not([profile-link])&#x27;</span>).<span class="hljs-title function_">forEach</span>(<span class="hljs-function"><span class="hljs-params">el</span> =&gt;</span> {
     <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(el)
     <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(el.<span class="hljs-property">data</span>)
@@ -426,18 +427,17 @@
 }
 
 <span class="hljs-built_in">setInterval</span>(<span class="hljs-function">() =&gt;</span> {
-   <span class="hljs-keyword">let</span> queryOptions = { <span class="hljs-attr">active</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">currentWindow</span>: <span class="hljs-literal">true</span> };
+  <span class="hljs-keyword">let</span> queryOptions = {<span class="hljs-attr">active</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">currentWindow</span>: <span class="hljs-literal">true</span>};
   chrome.<span class="hljs-property">tabs</span>.<span class="hljs-title function_">query</span>(queryOptions, <span class="hljs-function">(<span class="hljs-params">tb</span>) =&gt;</span> {
-    <span class="hljs-keyword">var</span> actTid = tb[<span class="hljs-number">0</span>]
+    <span class="hljs-keyword">var</span> actTid = tb[<span class="hljs-number">0</span>];
     chrome.<span class="hljs-property">scripting</span>.<span class="hljs-title function_">executeScript</span>(
-    {
-      <span class="hljs-attr">target</span>: {<span class="hljs-attr">tabId</span>: actTid.<span class="hljs-property">id</span>, <span class="hljs-attr">allFrames</span>: <span class="hljs-literal">true</span>},
-      <span class="hljs-attr">func</span>: injectFc,
-    },
-    <span class="hljs-function">() =&gt;</span> {
-        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">123</span>);
-    };
-   });
+      {
+        <span class="hljs-attr">target</span>: {<span class="hljs-attr">tabId</span>: actTid.<span class="hljs-property">id</span>, <span class="hljs-attr">allFrames</span>: <span class="hljs-literal">true</span>},
+        <span class="hljs-attr">func</span>: injectFc,
+      },
+      <span class="hljs-function">() =&gt;</span> {<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-number">123</span>);}
+    )
+  });
 }, <span class="hljs-number">20000</span>);
 </code></pre>
   </body>

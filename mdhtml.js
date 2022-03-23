@@ -40,7 +40,7 @@ md.use(highlightJs, {
  * convert markdown text to HTML text
  * @param {string} mdText
  * @param {Boolean} [pretty]
- * @return {string}
+ * @return {string} - HTML fragment
  */
 function mdToHtmlText(mdText, pretty = false) {
   let htmlText = md.render(mdText);
@@ -51,11 +51,11 @@ function mdToHtmlText(mdText, pretty = false) {
 }
 
 /**
- * convert markdown + style + title to HTML document
+ * convert markdown + style + title strings to complete HTML document
  * @param {string} mdContent
- * @param {string} styleContent
- * @param {string} titleContent
- * @return {string}
+ * @param {string} [styleContent]
+ * @param {string} [titleContent]
+ * @return {string} - complete html document text
  */
 function mdToHtmlDocument (
   mdContent,
