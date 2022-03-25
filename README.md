@@ -40,6 +40,7 @@ let htmlPretty = mdToHtmlText("# Hello World", true);
     htmlPretty:
     <h1>Hello World</h1>
  */
+
 /**
  * convert markdown + style + title strings to complete HTML document
  * @param {string} mdContent

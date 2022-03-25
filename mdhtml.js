@@ -43,6 +43,19 @@ md.use(highlightJs, {
  * @return {string} - HTML fragment
  */
 function mdToHtmlText(mdText, pretty = false) {
+
+  // strip any front matter
+  if (mdText.match(/^---/)) {
+    const lines = mdText.split('\n');
+    lines.shift(); // remove delimiter
+    for (;;) {
+      const isDelimiter = lines[0].match(/^---/);
+      lines.shift();
+      if (isDelimiter || lines.length === 0) { break; }
+    }
+    mdText = lines.join('\n');
+  }
+
   let htmlText = md.render(mdText);
   if (pretty) {
     htmlText = prettier.format(htmlText, {parser: 'html'});
