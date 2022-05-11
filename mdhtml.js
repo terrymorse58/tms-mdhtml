@@ -20,7 +20,7 @@ const htmlTemplate =
 </html>`;
 
 const md = new MarkdownIt({
-  html: false,  // enable HTML tags in source
+  html: true,  // enable HTML tags in source
   xhtmlOut: false,  // use '/' to close single tags
   breaks: false,  // convert newlines to <br>
   langPrefix: 'language-',  // class prefix for fenced blocks

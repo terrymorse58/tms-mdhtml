@@ -35,9 +35,23 @@ Class includes all individuals with existing or closed Morgan Stanley accounts
 established in the United States who received the notice letters sent by Morgan
 Stanley regarding the Data Security Incidents in July 2020 and/or June 2021.
 
-| This    | Is      |
-| ------- | ------- |
-| A       | Table   |
+Markdown Table:
+
+| This       | Is      |
+|------------| ------- |
+| A Markdown | Table   |
+
+Native Table:
+
+<table>
+  <tr>
+    <th colspan="2">This is</th>
+  </tr>
+  <tr>
+    <td>A Native</td>
+    <td>Table</td>
+  </tr>
+</table>
 
 Fenced code block:
 
