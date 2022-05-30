@@ -87,8 +87,13 @@ function mdToHtmlDocument (
     .replace('{{style}}', styleText)
     .replace('{{content}}', htmlText);
 
-  // return pretty HTML
-  return prettier.format(docText, {parser: 'html'});
+  // TERRY skip prettier for now (was hanging on HTML format errors)
+  // TODO make prettier an option
+  if (1 === 1) {
+    return docText;
+  } else {
+    return prettier.format(docText, {parser: 'html'});
+  }
 }
 
 export {
