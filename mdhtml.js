@@ -80,7 +80,7 @@ function mdToHtmlDocument (
 
   const htmlText = mdToHtmlText(mdContent);
 
-  const styleText = styleContent || styleDefault;
+  const styleText = styleContent;
 
   // form html document contents
   let docText = htmlTemplate.replace('{{title}}', titleContent)

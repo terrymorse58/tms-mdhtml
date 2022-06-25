@@ -1,6 +1,6 @@
 {
   "name": "tms-mdhtml",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "convert markdown to HTML",
   "type": "module",
   "main": "mdhtml.js",
